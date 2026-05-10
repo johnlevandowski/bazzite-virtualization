@@ -1,5 +1,6 @@
 # Create the qemu group and user
-setup-virtualization:
+[group("virtualization")]
+setup-virt-manager:
     @# Create the group if it doesn't exist
     getent group qemu > /dev/null || sudo groupadd -r qemu
     @# Create the user if it doesn't exist, assigning it to qemu group with no home dir

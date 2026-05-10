@@ -54,4 +54,4 @@ modules:
     validate: true
     install: true
     include:
-      - setup-virtualization.just
+      - setup-virt-manager.just
