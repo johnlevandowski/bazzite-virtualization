@@ -7,5 +7,5 @@ setup-virt-manager:
     getent passwd qemu > /dev/null || sudo useradd -r -g qemu -d / -s /usr/sbin/nologin -c "QEMU user" qemu
     @echo "User and group 'qemu' have been verified/created."
     getent group libvirt > /dev/null || sudo groupadd -r libvirt
-    sudo usermod -aG libvirt $USER
-    @echo "Group 'libvirt' has been verified/created and user added to 'libvirt' group."
+    groups $USER | grep -q '\blibvirt\b' || sudo usermod -aG libvirt $USER
+    @echo "Group 'libvirt' has been verified/created and user verified/added to 'libvirt' group."

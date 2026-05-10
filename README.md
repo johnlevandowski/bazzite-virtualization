@@ -31,7 +31,7 @@ The `latest` tag will automatically point to the latest build. That build will s
 
 To setup the needed linux users and groups for virtualization, run the following command:
 ```
-ujust enable-virt-manager
+ujust setup-virt-manager
 ```
 
 ## ISO
