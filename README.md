@@ -1,4 +1,4 @@
-# BlueBuild Template &nbsp; [![bluebuild](https://github.com/johnlevandowski/bazzite-virtualization/actions/workflows/build.yml/badge.svg)](https://github.com/johnlevandowski/bazzite-virtualization/actions/workflows/build.yml)
+# BlueBuild Template &nbsp; [![build bazzite-virtualization](https://github.com/johnlevandowski/bazzite-virtualization/actions/workflows/build.yml/badge.svg)](https://github.com/johnlevandowski/bazzite-virtualization/actions/workflows/build.yml)
 
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
 
@@ -36,5 +36,8 @@ If build on Fedora Atomic, you can generate an offline ISO with the instructions
 These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/blue-build/template
+cosign verify --key cosign.pub ghcr.io/johnlevandowski/bazzite-virtualization
 ```
+
+Base Image Ancestry
+https://quay.io/repository/fedora-ostree-desktops/kinoite > https://ghcr.io/ublue-os/kinoite-main:latest > https://ghcr.io/ublue-os/bazzite:latest  
