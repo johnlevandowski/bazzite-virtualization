@@ -1,4 +1,4 @@
-# BlueBuild Template &nbsp; [![build bazzite-virtualization](https://github.com/johnlevandowski/bazzite-virtualization/actions/workflows/build.yml/badge.svg)](https://github.com/johnlevandowski/bazzite-virtualization/actions/workflows/build.yml)
+# BlueBuild Template &nbsp; [![build bazzite-virtualization](https://github.com/johnlevandowski/bazzite-virtualization/actions/workflows/build.yml/badge.svg)](https://github.com/johnlevandowski/bazzite-virtualization/actions/workflows/build.yml) [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/johnlevandowski/bazzite-virtualization)
 
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
 
@@ -27,6 +27,13 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
 
+## Enable Virtualization
+
+To setup the needed linux users and groups for virtualization, run the following command:
+```
+ujust enable-virt-manager
+```
+
 ## ISO
 
 If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/how-to/generate-iso/#_top). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
@@ -35,9 +42,9 @@ If build on Fedora Atomic, you can generate an offline ISO with the instructions
 
 These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
 
-```bash
+```
 cosign verify --key cosign.pub ghcr.io/johnlevandowski/bazzite-virtualization
 ```
 
-Base Image Ancestry
+Base Image Ancestry  
 https://quay.io/repository/fedora-ostree-desktops/kinoite > https://ghcr.io/ublue-os/kinoite-main:latest > https://ghcr.io/ublue-os/bazzite:latest  
